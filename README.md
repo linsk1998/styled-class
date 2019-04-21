@@ -95,9 +95,12 @@ var b=mix(rgba(100,100,100,1),0xc8c8c8);
 ### 可处理常用的兼容性问题和浏览器补全
 
 ```javascript
-@styled
-export class Div1Style extends BoxStyle{
-    background=rgba(0,0,0,0.5);
+import {styled,gradient} from "styled-class";
+class GradientExample{
+	color="white";
+	margin="20px";
+	padding="20px";
+	background=gradient(0x3388ff,0x000000);
 }
 ```
 
