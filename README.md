@@ -92,7 +92,7 @@ var a=rgba(255,255,255,1);
 var b=mix(rgba(100,100,100,1),0xc8c8c8);
 ```
 
-### 可处理常用的兼容性问题和浏览器补全
+### 可处理常用的兼容性问题和浏览器前缀补全
 
 ```javascript
 import {styled,gradient} from "styled-class";
