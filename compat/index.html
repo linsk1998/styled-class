@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="renderer" content="webkit"/>
+		<title>scope</title>
+		<link href="/linsk1998/ting/master/ting/ting-quirks.css" rel="stylesheet"/>
+		<script src="../lib/polyfill.js"></script>
+		<script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
+		<script src="../dist/styled-class/index.js"></script>
+		<script>
+			require.config({
+				paths:{
+					"anu":window.attachEvent?"../lib/ReactIE":"../lib/React"
+				}
+			});
+			define('react',['anu'],function(anu){
+				return anu;
+			});
+			define('react-dom',['anu'],function(anu){
+				return anu;
+			});
+		</script>
+	</head>
+	<body>
+		<script>
+			require(["compat"]);
+		</script>
+	</body>
+</html>

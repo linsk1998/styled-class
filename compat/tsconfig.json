@@ -1,0 +1,28 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"target": "es3",
+		"declaration": false,
+		"lib": [
+			"es5",
+			"es2015.core",
+			"es2017.string",
+			"es2017.object",
+			"es2015.collection",
+			"es2015.promise",
+			"es2015.proxy",
+			"dom"
+		],
+		"typeRoots" : ["../dist","../node_modules/@types"],
+		"types" : ["react","react-dom","styled-class"],
+		"module" : "amd",
+		"sourceMap": false,
+		//"noEmitHelpers":true,
+		"watch": true,
+		"experimentalDecorators":true
+	},
+	"include": [
+		"./**/*"
+	],
+	"compileOnSave": true
+}
