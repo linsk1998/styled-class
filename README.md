@@ -20,6 +20,7 @@ export function DemoComponent(){
 ```
 
 使用styled装饰器，会生成的唯一class名称，自动创建相关style标签，并修改toString函数。toString()可以省略，会自动调用。
+[查看演示](http://raw.githack.com/linsk1998/styled-class/mobx/index.html "查看演示")
 
 ### 结合mobx使用
 
@@ -52,6 +53,8 @@ function changeTheme(){//使用mobx监视，primary改变时，自动更新样�
 }
 ```
 
+[查看演示](http://raw.githack.com/linsk1998/styled-class/mobx/index.html "查看演示")
+
 ### 可以使用类的继承来复用样式
 
 ```javascript
@@ -71,6 +74,8 @@ export class Div2Style extends BoxStyle{
 	background="blue";
 }
 ```
+
+[查看演示](http://raw.githack.com/linsk1998/styled-class/mobx/index.html "查看演示")
 
 ### 可以和Less、Sass等预处理器同时使用
 
@@ -95,3 +100,5 @@ export class Div1Style extends BoxStyle{
     background=rgba(0,0,0,0.5);
 }
 ```
+
+[查看演示](http://javascript.sky.hm/linsk1998/styled-class/compat/index.html "查看演示")
