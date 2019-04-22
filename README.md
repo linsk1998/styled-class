@@ -1,7 +1,7 @@
 # styled-class是一个CSS-in-JS库
 ### 为什么要在JavaScript里写CSS？
 
-1. 避免全局污染
+1. 避免命名全局污染
 2. 条件和动态样式（比如选择主题色之类的）
 3. 在框架层面进行限制或补充（比如补全供应商前缀），避免业务人员使用奇技淫巧
 
@@ -20,7 +20,7 @@ export function DemoComponent(){
 ```
 
 使用styled装饰器，会生成的唯一class名称，自动创建相关style标签，并修改toString函数。toString()可以省略，会自动调用。
-[查看演示](http://raw.githack.com/linsk1998/styled-class/mobx/index.html "查看演示")
+[查看演示](https://linsk1998.github.io/styled-class/scope/index.html "查看演示")
 
 ### 结合mobx使用
 
@@ -53,7 +53,7 @@ function changeTheme(){//使用mobx监视，primary改变时，自动更新样�
 }
 ```
 
-[查看演示](http://raw.githack.com/linsk1998/styled-class/mobx/index.html "查看演示")
+[查看演示](https://linsk1998.github.io/styled-class/mobx/index.html "查看演示")
 
 ### 可以使用类的继承来复用样式
 
@@ -75,7 +75,7 @@ export class Div2Style extends BoxStyle{
 }
 ```
 
-[查看演示](http://raw.githack.com/linsk1998/styled-class/mobx/index.html "查看演示")
+[查看演示](https://linsk1998.github.io/styled-class/scope/index.html "查看演示")
 
 ### 可以和Less、Sass等预处理器同时使用
 
@@ -104,4 +104,4 @@ class GradientExample{
 }
 ```
 
-[查看演示](http://javascript.sky.hm/linsk1998/styled-class/compat/index.html "查看演示")
+[查看演示](https://linsk1998.github.io/styled-class/compat/index.html "查看演示")
