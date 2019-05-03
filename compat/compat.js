@@ -1,10 +1,4 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-define(["require", "exports", "react", "react-dom", "styled-class"], function (require, exports, React, ReactDOM, styled_class_1) {
+define(["require", "exports", "react", "react-dom", "styled-class", "color", "chroma"], function (require, exports, React, ReactDOM, styled_class_1, color_1, chroma_1) {
     "use strict";
     exports.__esModule = true;
     var InineBlock = /** @class */ (function () {
@@ -37,7 +31,7 @@ define(["require", "exports", "react", "react-dom", "styled-class"], function (r
             this.color = "white";
             this.margin = "20px";
             this.padding = "20px";
-            this.background = styled_class_1.rgba(0, 0, 0, 0.5);
+            this.background = color_1.rgba(0, 0, 0, 0.5);
         }
         RGBAExample = __decorate([
             styled_class_1.styled
@@ -46,10 +40,10 @@ define(["require", "exports", "react", "react-dom", "styled-class"], function (r
     }());
     var GradientExample = /** @class */ (function () {
         function GradientExample() {
-            this.color = "white";
+            this.color = 0xffffff;
             this.margin = "20px";
             this.padding = "20px";
-            this.background = styled_class_1.gradient(0x3388ff, styled_class_1.rgba(0, 0, 0, 0.8));
+            this.background = styled_class_1.gradient(0x3388ff, color_1.rgba(0, 0, 0, 0.8));
         }
         GradientExample = __decorate([
             styled_class_1.styled
@@ -58,7 +52,7 @@ define(["require", "exports", "react", "react-dom", "styled-class"], function (r
     }());
     var CoverExample = /** @class */ (function () {
         function CoverExample() {
-            this.color = "white";
+            this.color = chroma_1.rgb(255, 255, 255);
             this.width = "600px";
             this.height = "300px";
             this.background = styled_class_1.cover(new URL("http://www.w3school.com.cn/i/eg_tulip.jpg"));

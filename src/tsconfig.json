@@ -16,7 +16,7 @@
 		"module" : "amd",
 		"outFile": "../dist/styled-class/index.js",
 		"sourceMap": false,
-		//"noEmitHelpers":true,
+		"noEmitHelpers":true,
 		"watch": true,
 		"experimentalDecorators":true
 	},

@@ -84,18 +84,21 @@ export class Div2Style extends BoxStyle{
 xxx.className=MyStyle.toString()+" clearfix";
 ```
 
-### 内置了常用的颜色计算函数
+### 内置了常用的颜色计算函数,也支持chroma
 ```javascript
-import {styled,rgb,rgba,hsl,darken,lighten,mix,saturate,spin} from "styled-class";
+import {styled} from "styled-class";
+import {rgba} from "color";
+import {rgb} from "chroma";
 
 var a=rgba(255,255,255,1);
-var b=mix(rgba(100,100,100,1),0xc8c8c8);
+var b=mix(rgb(100,100,100),0xc8c8c8);
 ```
 
 ### 可处理常用的兼容性问题和浏览器前缀补全
 
 ```javascript
 import {styled,gradient} from "styled-class";
+@styled
 class GradientExample{
 	color="white";
 	margin="20px";

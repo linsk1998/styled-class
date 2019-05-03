@@ -1,10 +1,4 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-define(["require", "exports", "styled-class", "mobx"], function (require, exports, styled_class_1, mobx_1) {
+define(["require", "exports", "styled-class", "color", "mobx"], function (require, exports, styled_class_1, color_1, mobx_1) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     //配置，初始化时用mobx收集依赖，有改变时自动更新样式
@@ -16,22 +10,22 @@ define(["require", "exports", "styled-class", "mobx"], function (require, export
     //主题色，用mobx监视
     var Theme = /** @class */ (function () {
         function Theme() {
-            this.primary = styled_class_1.rgb(0x33, 0x7a, 0xb7);
-            this.caption = styled_class_1.rgb(0xff, 0xff, 0xff);
-            this.text = styled_class_1.rgb(0x33, 0x33, 0x33);
-            this.accent = styled_class_1.rgb(0x60, 0x7D, 0x8B);
-            this.divider = styled_class_1.rgb(0xcc, 0xcc, 0xcc);
+            this.primary = color_1.rgb(0x33, 0x7a, 0xb7);
+            this.caption = color_1.rgb(0xff, 0xff, 0xff);
+            this.text = color_1.rgb(0x33, 0x33, 0x33);
+            this.accent = color_1.rgb(0x60, 0x7D, 0x8B);
+            this.divider = color_1.rgb(0xcc, 0xcc, 0xcc);
         }
         Object.defineProperty(Theme.prototype, "darkPrimary", {
             get: function () {
-                return styled_class_1.darken(this.primary, 0.15);
+                return this.primary.darken(0.15);
             },
             enumerable: true,
             configurable: true
         });
         Object.defineProperty(Theme.prototype, "lightPrimary", {
             get: function () {
-                return styled_class_1.lighten(this.primary, 0.15);
+                return this.primary.brighten(0.15);
             },
             enumerable: true,
             configurable: true
@@ -90,6 +84,6 @@ define(["require", "exports", "styled-class", "mobx"], function (require, export
     exports.PanelStyle = PanelStyle;
     document.getElementById("div1").className = PanelStyle.toString();
     document.getElementById("themeBtn").onclick = function () {
-        theme.primary = styled_class_1.hsl(360 * Math.random(), 0.55, 0.45); //hsl 色相 饱和度 亮度
+        theme.primary = color_1.hcl(360 * Math.random(), 0.6, 0.5); //hsy 色相 饱和度 亮度
     };
 });

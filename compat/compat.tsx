@@ -1,7 +1,9 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import {styled,rgba,gradient,cover} from "styled-class";
+import {styled,gradient,cover} from "styled-class";
+import {rgba} from "color";
+import {rgb} from "chroma";
 
 @styled
 class InineBlock{
@@ -27,19 +29,18 @@ class RGBAExample{
 }
 @styled
 class GradientExample{
-	color="white";
+	color=0xffffff;
 	margin="20px";
 	padding="20px";
 	background=gradient(0x3388ff,rgba(0,0,0,0.8));
 }
 @styled
 class CoverExample{
-	color="white";
+	color=rgb(255,255,255);
 	width="600px";
 	height="300px";
 	background=cover(new URL("http://www.w3school.com.cn/i/eg_tulip.jpg"));
 }
-
 ReactDOM.render(<div className="container">
 	<h1>inline-block</h1>
 	<div className={InineBlock as any}>inline-block</div>

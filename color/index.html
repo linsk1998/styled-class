@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="renderer" content="webkit"/>
+		<title>scope</title>
+		<link href="/linsk1998/ting/master/ting/ting-quirks.css" rel="stylesheet"/>
+		<style>
+			section{ display:inline-block; width:60px; height:30px; margin:10px;}
+		</style>
+		<script src="../lib/polyfill.js"></script>
+		<script src="../lib/tslib.js"></script>
+		<script src="https://cdn.bootcss.com/require.js/2.3.6/require.js"></script>
+		<script src="../dist/color/index.js"></script>
+		<script>
+		</script>
+	</head>
+	<body>
+		<div id="hclDemo"></div>
+		<div id="lchDemo"></div>
+		<script>
+			var hclDemo=document.getElementById("hclDemo");
+			var lchDemo=document.getElementById("lchDemo");
+			require(["color"],function(color){
+				window.color=color;
+				for(var h=0;h<360;h+=30){
+					var primary=color.hcl(h,0.6,0.5);
+					console.log(primary.hex());
+					var div=document.createElement("section");
+					div.className="";
+					div.style.backgroundColor=primary.hex();
+					hclDemo.appendChild(div);
+					
+					primary=color.lch(49,38,h);
+					div=document.createElement("section");
+					div.className="";
+					div.style.backgroundColor=primary.hex();
+					lchDemo.appendChild(div);
+				}
+			});
+		</script>
+	</body>
+</html>

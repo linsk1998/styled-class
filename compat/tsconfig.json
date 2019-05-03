@@ -13,11 +13,11 @@
 			"es2015.proxy",
 			"dom"
 		],
-		"typeRoots" : ["../dist","../node_modules/@types"],
-		"types" : ["react","react-dom","styled-class"],
+		"typeRoots" : ["../dist","../typings"],
+		"types" : ["react","react-dom","styled-class","color","chroma"],
 		"module" : "amd",
 		"sourceMap": false,
-		//"noEmitHelpers":true,
+		"noEmitHelpers":true,
 		"watch": true,
 		"experimentalDecorators":true
 	},

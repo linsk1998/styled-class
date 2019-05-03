@@ -1,6 +1,7 @@
 
 
-import {styled,rgb,hsl,darken,lighten,refreshStyle,setStyleInitor} from "styled-class";
+import {styled,refreshStyle,setStyleInitor} from "styled-class";
+import {rgb,hsl,hcl} from "color";
 import {observable, autorun, computed, action} from "mobx";
 
 //配置，初始化时用mobx收集依赖，有改变时自动更新样式
@@ -16,11 +17,11 @@ class Theme{
 
 	@computed//主题色-深色
 	get darkPrimary(){
-		return darken(this.primary,0.15);
+		return this.primary.darken(0.15);
 	}
 	@computed//主题色-浅色
 	get lightPrimary(){
-		return lighten(this.primary,0.15);
+		return this.primary.brighten(0.15);
 	}
 	@observable//标题色
 	caption=rgb(0xff,0xff,0xff);
@@ -60,5 +61,5 @@ export class PanelStyle{
 }
 document.getElementById("div1").className=PanelStyle.toString();
 document.getElementById("themeBtn").onclick=function(){
-	theme.primary=hsl(360*Math.random(),0.55,0.45);//hsl 色相 饱和度 亮度
+	theme.primary=hcl(360*Math.random(),0.6, 0.5);//hsy 色相 饱和度 亮度
 };

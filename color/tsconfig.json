@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "es3",
-		"declaration": false,
+		"declaration": true,
 		"lib": [
 			"es5",
 			"es2015.core",
@@ -12,8 +12,9 @@
 			"es2015.proxy",
 			"dom"
 		],
-		"typeRoots" : ["../typings","../dist"],
+		"typeRoots" : ["../typings"],
 		"module" : "amd",
+		"outFile": "../dist/color/index.js",
 		"sourceMap": false,
 		"noEmitHelpers":true,
 		"watch": true,
