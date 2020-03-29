@@ -1,0 +1,23 @@
+{
+  "name": "styled-class",
+  "version": "1.0.0",
+  "description": "CSS in JS lib",
+  "module": "styled-class.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linsk1998/styled-class.git"
+  },
+  "keywords": [
+    "css",
+    "js"
+  ],
+  "author": "linsk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/linsk1998/styled-class/issues"
+  },
+  "homepage": "https://github.com/linsk1998/styled-class#readme"
+}

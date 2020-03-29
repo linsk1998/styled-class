@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"target": "es3",
-		"declaration": true,
+		"target": "ES6",
+		"declaration": false,
 		"lib": [
 			"es5",
 			"es2015.core",
@@ -14,15 +14,15 @@
 			"dom"
 		],
 		"typeRoots" : ["../typings"],
-		"module" : "amd",
-		"outFile": "../dist/styled-class/index.js",
+		"module" : "ES6",
+		"outDir": "./dist/styled-class/",
 		"sourceMap": false,
 		"noEmitHelpers":true,
 		"watch": true,
 		"experimentalDecorators":true
 	},
 	"include": [
-		"./**/*"
+		"./src/**/*"
 	],
 	"compileOnSave": true
 }
